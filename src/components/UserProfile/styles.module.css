@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1em 3em;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.359);
+    border-radius: 7px;
+    position: relative;
+    cursor: pointer;
+    gap: 1em;
+    width: 300px;
+}
+
+.image_container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+
+}
+
+.infos h1 {
+    font-weight: 600;
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(44, 41, 41);
+}
+
+.level {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(44, 41, 41);
+    border-radius: 50%;
+    box-shadow: 4px 4px 5px rgba(197, 197, 197, 0.183);
+    position: absolute;
+    left: 3em;
+    top: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.level p {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}

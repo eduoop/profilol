@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+    margin-bottom: 5em;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 3%;
+    top: 30px;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.paper {
+    width: 85%;
+    border-radius: 8px;
+    background-color: rgb(223, 223, 223);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.32);
+}
+
+.profile_infos_header {
+    display: flex;
+}
+
+.profile_infos {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    background: rgb(44, 41, 41);
+    padding: 1.5em 2em;
+    width: 100%;
+    justify-content: center;
+}
+
+.image_container img {
+    border-radius: 50%;
+    width: 130px;
+}
+
+.profile_user_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.profile_user_infos h1, h2 {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    color: white;
+}
