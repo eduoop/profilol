@@ -1,0 +1,78 @@
+.card {
+    background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: fit-content;
+  border-radius: 8px;
+  position: relative;
+}
+
+.card form {
+  display: flex;
+  gap: 0.5em;
+  padding: 3em 2em;
+
+}
+
+.card form input {
+  outline: none;
+  border: none;
+  padding: 1em;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+
+.abled {
+    outline: none;
+    border-radius: 100%;
+    padding: .7em;
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .5s;
+    font-size: 1em;
+    color: white;
+    transition: .5s;
+}
+
+.abled svg {
+    font-size: 1.4em;
+}
+
+.abled:hover {
+  background-color: white;
+  color: #ff4655;
+}
+
+.close {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5em;
+}
+
+.disabled {
+  outline: none;
+  border-radius: 100%;
+  padding: .7em;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.407);
+  transition: .5s;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.407);
+  transition: .5s;
+}
+
+.disabled svg {
+  font-size: 1.4em;
+}

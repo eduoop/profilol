@@ -38,6 +38,7 @@
 
 .image_container img {
     border-radius: 50%;
+    border: 2px solid white;
     width: 130px;
 }
 
@@ -51,5 +52,139 @@
     display: flex;
     align-items: center;
     gap: .5em;
+    font-size: 1.8em;
     color: white;
+}
+
+.leagues_container {
+    display: flex;
+    background: linear-gradient(to right, rgba(158, 158, 158, 0.337), rgba(255, 255, 255, 0));
+
+}
+
+.user_infos_container {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    width: 100%;
+}
+
+.rank_img_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.rank_img_container img {
+    width: 180px;
+}
+
+.rank_img_container h1 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.wins_and_loses {
+    display: flex;
+    gap: 1em;
+    position: relative;
+    height: 35px;
+    cursor: default;
+}
+
+.wins {
+    color: rgb(65, 218, 65);
+    letter-spacing: 0px;
+    font-size: 1.8em;
+}
+
+.losses {
+    color: rgb(218, 75, 65);
+    letter-spacing: 0px;
+    font-size: 1.8em;
+}
+
+.wins_enter {
+    border: 2px solid rgb(65, 218, 65);
+    background: linear-gradient(to bottom, rgba(137, 255, 137, 0.755), rgba(65, 218, 65, 0.13));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    border-radius: 6px;
+    color: rgb(44, 41, 41);
+    font-size: .9em;
+    font-weight: 600;
+    padding: .3em .2em;
+    top: -31px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.218);
+    position: absolute;
+    transition: .5s;
+    opacity: 0;
+    text-align: center;
+}
+
+.wins_enter_second {
+    border: 2px solid rgb(65, 218, 65);
+    background: linear-gradient(to bottom, rgba(137, 255, 137, 0.755), rgba(65, 218, 65, 0.13));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    border-radius: 6px;
+    color: rgb(44, 41, 41);
+    font-size: .9em;
+    font-weight: 600;
+    padding: .3em .2em;
+    top: -31px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.218);
+    position: absolute;
+    transition: .5s;
+    text-align: center;
+    opacity: 0;
+}
+
+.loses_enter {
+    border: 2px solid rgb(218, 75, 65);
+    background: linear-gradient(to bottom, rgba(218, 75, 65, 0.808), rgba(218, 75, 65, 0.249));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    border-radius: 6px;
+    text-align: center;
+    color: rgb(44, 41, 41);
+    font-size: .9em;
+    font-weight: 600;
+    padding: .3em .2em;
+    bottom: -30px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.218);
+    position: absolute;
+    transition: .5s;
+    opacity: 0;
+}
+
+.loses_enter_second {
+    border: 2px solid rgb(218, 75, 65);
+    background: linear-gradient(to bottom, rgba(218, 75, 65, 0.808), rgba(218, 75, 65, 0.249));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4em;
+    border-radius: 6px;
+    color: rgb(44, 41, 41);
+    font-size: .9em;
+    font-weight: 600;
+    padding: .3em .2em;
+    bottom: -50px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.218);
+    position: absolute;
+    transition: .5s;
+    opacity: 0;
+}
+
+.opacity {
+    opacity: 1;
 }

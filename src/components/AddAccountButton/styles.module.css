@@ -1,0 +1,29 @@
+.add_account {
+}
+
+.add_account button {
+    display: flex;
+    align-items: center;
+    padding: .5em .5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 8px;
+    font-size: .8em;
+    cursor: pointer;
+    gap: .8em;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.add_account button svg {
+    font-size: 1.5em;
+}
+
+.add_account button:hover {
+    background-color: white;
+    color: #ff4655;
+}
