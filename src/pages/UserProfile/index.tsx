@@ -84,7 +84,7 @@ export const UserProfile = () => {
 
   useEffect(() => {
     if(bestChamps) {
-     console.log(bestChamps)
+     console.log(bestChamps.length)
     }
   }, [bestChamps])
 
