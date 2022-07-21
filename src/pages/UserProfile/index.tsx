@@ -56,8 +56,6 @@ export const UserProfile = () => {
         api.get(`/lol/champion-mastery/v4/champion-masteries/by-summoner/${user.id}?${apikey}`)
         .then((res) => {
           setUChampions(res.data)
-          console.log(res.data)
-          console.log(user.id)
         })
         .catch((err) => console.log(err))
     }
@@ -82,7 +80,7 @@ export const UserProfile = () => {
         getChampion(champ.championId) 
       })
     }
-  },[champions])
+  },[bestChamps])
 
   useEffect(() => {
     if(bestChamps) {
