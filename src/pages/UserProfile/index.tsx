@@ -34,7 +34,7 @@ export const UserProfile = () => {
   const [champions, setUChampions] = useState<Champeon[]>()
   let arrBestChamps: any = [];
   const [bestChamps, setBestChamps] = useState(arrBestChamps)
-  const [bestChampsFull, setBestChampsFull] = useState<ChampeonFullInfos>()
+  const [bestChampsFull, setBestChampsFull] = useState<ChampeonFullInfos[]>()
   const [principalLeag, setPrincipalLeag] = useState<UserLeague>()
   const [mouseEnterWinsInPrincipal, setMouseEnterWinsInPrincipal] = useState(false)
   const [mouseEnterLossesInPrincipal, setMouseEnterLossesInPrincipal] = useState(false)
@@ -101,8 +101,7 @@ export const UserProfile = () => {
         bestChamps.map((champ: string) => {
           axios.get(`http://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion/${capitalizeFirstLetter(champ)}.json`)
           .then((res) => {
-            console.log(res.data.data.champ)
-            console.log(champ)
+            console.log(res.data.data)
           })
         })
       }
@@ -144,7 +143,6 @@ export const UserProfile = () => {
 
   useEffect(() => {
     if(winrate) {
-     console.log(winrate)
     }
   }, [winrate])
 
@@ -250,6 +248,9 @@ export const UserProfile = () => {
                 </div>
               </div>
             }
+          </div>
+          <div>
+            
           </div>
         </div>  
       </div>
