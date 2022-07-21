@@ -10,6 +10,7 @@ import {IoIosRocket} from 'react-icons/io'
 import {RiCloseCircleFill} from 'react-icons/ri'
 import {IoIosTrophy} from 'react-icons/io'
 import { Champeon } from '../../types/Champion'
+import { ChampeonFullInfos } from '../../types/Champion'
 import { UserLeague } from '../../types/UserLeag'
 import bronze from '../../assets/emblems/Emblem_Bronze.png'
 import iron from '../../assets/emblems/Emblem_Iron.png'
@@ -33,6 +34,7 @@ export const UserProfile = () => {
   const [champions, setUChampions] = useState<Champeon[]>()
   let arrBestChamps: any = [];
   const [bestChamps, setBestChamps] = useState(arrBestChamps)
+  const [bestChampsFull, setBestChampsFull] = useState<ChampeonFullInfos>()
   const [principalLeag, setPrincipalLeag] = useState<UserLeague>()
   const [mouseEnterWinsInPrincipal, setMouseEnterWinsInPrincipal] = useState(false)
   const [mouseEnterLossesInPrincipal, setMouseEnterLossesInPrincipal] = useState(false)
@@ -88,11 +90,29 @@ export const UserProfile = () => {
     }
   },[champions])
 
-  useEffect(() => {
-    if(bestChamps) {
-     console.log(bestChamps)
+    // get best champ
+
+    function capitalizeFirstLetter(string: string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
     }
-  }, [bestChamps])
+
+    const setBestChamp = () => {
+      if(bestChamps) {
+        bestChamps.map((champ: string) => {
+          axios.get(`http://ddragon.leagueoflegends.com/cdn/12.13.1/data/pt_BR/champion/${capitalizeFirstLetter(champ)}.json`)
+          .then((res) => {
+            console.log(res.data.data.champ)
+            console.log(champ)
+          })
+        })
+      }
+    }
+
+    useEffect(() => {
+      if(bestChamps) {
+        setBestChamp()
+      }
+    }, [bestChamps])
 
   // get user league
 
