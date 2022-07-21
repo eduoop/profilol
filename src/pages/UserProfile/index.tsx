@@ -27,9 +27,12 @@ import axios from 'axios'
 export const UserProfile = () => {
   
   const apikey  = import.meta.env.VITE_API_KEY;
+
+  
   const [user, setUser] = useState<UsersSearch>()
   const [champions, setUChampions] = useState<Champeon[]>()
-  let bestChamps:  String[] = []
+  let arrBestChamps: any = [];
+  const [bestChamps, setBestChamps] = useState(arrBestChamps)
   const [principalLeag, setPrincipalLeag] = useState<UserLeague>()
   const [mouseEnterWinsInPrincipal, setMouseEnterWinsInPrincipal] = useState(false)
   const [mouseEnterLossesInPrincipal, setMouseEnterLossesInPrincipal] = useState(false)
@@ -56,6 +59,8 @@ export const UserProfile = () => {
         api.get(`/lol/champion-mastery/v4/champion-masteries/by-summoner/${user.id}?${apikey}`)
         .then((res) => {
           setUChampions(res.data)
+          console.log(res.data)
+          console.log(user.id)
         })
         .catch((err) => console.log(err))
     }
@@ -68,7 +73,8 @@ export const UserProfile = () => {
     .then((res) => {
       for (var i in res.data.data) {
         if (res.data.data[i].key == id) {
-          bestChamps.push(res.data.data[i].id)
+          const iteration = res.data.data[i].id
+          setBestChamps((arrBestChamps: any) => [...arrBestChamps, iteration])
         }
       }
     })
@@ -80,11 +86,11 @@ export const UserProfile = () => {
         getChampion(champ.championId) 
       })
     }
-  },[bestChamps])
+  },[champions])
 
   useEffect(() => {
     if(bestChamps) {
-     console.log(bestChamps.length)
+     console.log(bestChamps)
     }
   }, [bestChamps])
 
